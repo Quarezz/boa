@@ -8,20 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RootWireframe.h"
-#import "<%= @prefixed_module %>Presenter.h"
+@class <%= @prefix %>RootWireframe.h;
 
-@class <%= @prefixed_module %>Presenter;
-
-/**
- Module wireframe for the <%= @module %> module.
- */
 @interface <%= @prefixed_module %>Wireframe : NSObject
 
-@property (nonatomic, strong) RootWireframe *rootWireframe;
-@property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;
+@property (nonatomic, strong) <%= @prefix %>RootWireframe *rootWireframe;
 
-// initialization
-- (void)presentSelfFromViewController:(UIViewController *)viewController;
+-(instancetype) init;
+
+- (void)presentFromViewController:(UIViewController *)viewController;
 
 @end

@@ -4,7 +4,7 @@ module Boa
   class Module < Thor
     include Thor::Actions
 
-    BASE_PATH = 'Classes/Modules'
+    BASE_PATH = './'
 
     FILES_OBJC = {
       'DataManager.h'     => 'DataManager',
@@ -14,7 +14,6 @@ module Boa
       'ModuleInterface.h' => 'ModuleInterface',
       'Presenter.h'       => 'Presenter',
       'Presenter.m'       => 'Presenter',
-      'ViewInterface.h'   => 'View',
       'ViewController.h'  => 'View',
       'ViewController.m'  => 'View',
       'Wireframe.h'       => 'Wireframe',
@@ -47,6 +46,7 @@ module Boa
 
       @module          = module_name
       @prefixed_module = config[:class_prefix] + @module
+      @prefix          = config[:class_prefix]
       @project         = config[:project]
       @author          = config[:author]
       @date            = Time.now.strftime('%d/%m/%y')

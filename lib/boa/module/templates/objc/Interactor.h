@@ -8,17 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "<%= @prefixed_module %>Presenter.h"
-#import "<%= @prefixed_module %>DataManager.h"
+#import "<%= @prefixed_module %>ModuleInterface.h"
 
-@class <%= @prefixed_module %>Presenter;
+@class <%= @prefixed_module %>DataManager;
 
-/**
- Business logic for the <%= @module %> module.
- */
-@interface <%= @prefixed_module %>Interactor : NSObject
+@interface <%= @prefixed_module %>Interactor : NSObject <<%= @prefixed_module %>InteractorInput>
 
-@property (nonatomic, strong) <%= @prefixed_module %>Presenter *presenter;
 @property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
+@property (nonatomic, weak)   id<<%= @prefixed_module %>InteractorOutput> presenter;
 
 @end

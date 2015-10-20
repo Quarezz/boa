@@ -7,27 +7,43 @@
 //
 
 #import "<%= @prefixed_module %>Wireframe.h"
+
+#import "<%= @prefixed_module %>ModuleInterface.h"
+
 #import "<%= @prefixed_module %>ViewController.h"
+#import "<%= @prefixed_module %>Interactor.h"
+#import "<%= @prefixed_module %>Presenter.h"
 
 @interface <%= @prefixed_module %>Wireframe ()
-
-@property (nonatomic, strong) <%= @prefixed_module %>ViewController *viewController;
 
 @end
 
 @implementation <%= @prefixed_module %>Wireframe
 
-- (void)presentSelfFromViewController:(UIViewController *)viewController
+-(instancetype) init
 {
-    // save reference
-    self.viewController = [[<%= @prefixed_module %>ViewController alloc] initWithNibName:@"<%= @prefixed_module %>ViewController" bundle:nil];
+    if (self = [super init])
+    {
+      // instantiate viewController
+      // self.viewController = ...;
 
-    // view <-> presenter
-    self.presenter.userInterface = self.viewController;
-    self.viewController.eventHandler = self.presenter;
+      // view <-> presenter
+      <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
 
+      presenter.view = self.viewController;
+      self.viewController.presenter = presenter;
+
+      // interactor <-> presenter
+      <%= @prefixed_module %>Interactor *interactor = [<%= @prefixed_module %>Interactor new];
+      presenter.interactor = interactor;
+      interactor.presenter = presenter;
+    }
+    return self;
+}
+
+- (void)presentFromViewController:(UIViewController *)viewController
+{
     // present controller
-    // *** present self with RootViewController
 }
 
 @end

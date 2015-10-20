@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- Module interface for the <%= @module %> module.
- */
-@protocol <%= @prefixed_module %>ModuleInterface <NSObject>
+@protocol <%= @prefixed_module %>InteractorInput <NSObject>
 
 @end
 
-/**
- Module delegate for the <%= @module %> module.
- */
-@protocol <%= @prefixed_module %>ModuleDelegate <NSObject>
+@protocol <%= @prefixed_module %>InteractorOutput <NSObject>
+
+@end
+
+@protocol <%= @prefixed_module %>PresenterProtocol <NSObject>
+
+@end
+
+@protocol <%= @prefixed_module %>ViewProtocol <NSObject>
 
 @end

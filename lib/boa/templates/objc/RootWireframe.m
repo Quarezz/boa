@@ -1,18 +1,18 @@
 //
-//  RootWireframe.m
+//  <%= @project %>RootWireframe.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "RootWireframe.h"
+#import "<%= @project %>RootWireframe.h"
 
-@interface RootWireframe ()
+@interface <%= @project %>RootWireframe ()
 
 @end
 
-@implementation RootWireframe
+@implementation <%= @project %>RootWireframe
 
 - (id)initWithWindow:(UIWindow *)window
 {

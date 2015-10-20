@@ -71,7 +71,7 @@ module Boa
                       when 'swift' then PROJECT_FILES_SWIFT
                       end
       project_files.each do |file_name, folder|
-        template "templates/#{lang}/#{file_name}", "#{folder}/#{file_name}"
+        template "templates/#{lang}/#{file_name}", "#{folder}/#{@project}#{file_name}"
       end
     end
 

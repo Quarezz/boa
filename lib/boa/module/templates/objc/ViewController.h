@@ -11,13 +11,8 @@
 #import "<%= @prefixed_module %>ModuleInterface.h"
 #import "<%= @prefixed_module %>ViewInterface.h"
 
-/**
- View controller for the <%= @module %> module.
- */
-@interface <%= @prefixed_module %>ViewController : UIViewController <<%= @prefixed_module %>ViewInterface>
+@interface <%= @prefixed_module %>ViewController : UIViewController <<%= @prefixed_module %>ViewProtocol>
 
-@property (nonatomic, strong) id<<%= @prefixed_module %>ModuleInterface> eventHandler;
-
-// *** add UI events here
+@property (nonatomic, strong) id<<%= @prefixed_module %>PresenterProtocol> presenter;
 
 @end

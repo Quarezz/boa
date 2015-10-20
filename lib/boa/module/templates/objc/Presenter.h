@@ -10,21 +10,13 @@
 
 #import "<%= @prefixed_module %>ModuleInterface.h"
 
-#import "<%= @prefixed_module %>Interactor.h"
-#import "<%= @prefixed_module %>Wireframe.h"
-#import "<%= @prefixed_module %>ViewInterface.h"
-
 @class <%= @prefixed_module %>Wireframe;
-@class <%= @prefixed_module %>Interactor;
 
-/**
- Display logic for the <%= @module %> module.
- */
-@interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>ModuleInterface>
+@interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>InteractorOutput>
 
-@property (nonatomic, strong) <%= @prefixed_module %>Interactor *interactor;
 @property (nonatomic, strong) <%= @prefixed_module %>Wireframe *wireframe;
+@property (nonatomic, strong) id<<%= @prefixed_module %>InteractorInput> interactor;
 
-@property (nonatomic, strong) UIViewController<<%= @prefixed_module %>ViewInterface> *userInterface;
+@property (nonatomic, weak) id<<%= @prefixed_module %>ViewProtocol> view;
 
 @end

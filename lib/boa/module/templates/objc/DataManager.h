@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- Data manager for the <%= @module %> module.
- */
 @interface <%= @prefixed_module %>DataManager : NSObject
 
 @end

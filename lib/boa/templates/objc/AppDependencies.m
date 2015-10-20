@@ -10,11 +10,6 @@
 
 #import "RootWireframe.h"
 
-#import "HomeWireframe.h"
-#import "HomePresenter.h"
-#import "HomeDataManager.h"
-#import "HomeInteractor.h"
-
 @interface <%= @project %>AppDependencies ()
 
 @end
@@ -40,7 +35,7 @@
 {
     // -----
     // root classes
-    RootWireframe *rootWireframe = [[RootWireframe alloc] initWithWindow:window];
+    <%= @project %>RootWireframe *rootWireframe = [[<%= @project %>RootWireframe alloc] initWithWindow:window];
     // *** add datastore
 
     // *** module initialization

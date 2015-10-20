@@ -14,16 +14,6 @@
 
 @implementation <%= @prefixed_module %>ViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        // Custom initialization
-    }
-    return self;
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -41,12 +31,11 @@
     [super viewDidAppear:animated];
 }
 
-#pragma mark - <%= @prefixed_module %>ViewInterface methods
-
-// *** implement view_interface methods here
-
-#pragma mark - Button event handlers
+#pragma mark - Actions
 
 // ** handle UI events here
+
+#pragma mark - Callbacks
+
 
 @end

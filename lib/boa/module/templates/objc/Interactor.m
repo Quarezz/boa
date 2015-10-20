@@ -8,6 +8,8 @@
 
 #import "<%= @prefixed_module %>Interactor.h"
 
+#import "<%= @prefixed_module %>DataManager.h"
+
 @implementation <%= @prefixed_module %>Interactor
 
 @end

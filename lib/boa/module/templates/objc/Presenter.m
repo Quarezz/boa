@@ -8,10 +8,12 @@
 
 #import "<%= @prefixed_module %>Presenter.h"
 
+#import "<%= @prefixed_module %>Wireframe.h"
+
 @implementation <%= @prefixed_module %>Presenter
 
-#pragma mark - <%= @prefixed_module %>ModuleInterface methods
+#pragma mark - Actions
 
-// implement module interface here
+#pragma mark - Callbacks
 
 @end
