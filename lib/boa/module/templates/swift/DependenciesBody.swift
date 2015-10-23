@@ -2,14 +2,14 @@
 // begin <%= @module %> module
 
 // instantiate classes
-var <%= @module.downcase %>Wireframe: <%= @prefixed_module %>Wireframe      = <%= @prefixed_module %>Wireframe()
+var <%= @module.downcase %>Router: <%= @prefixed_module %>Router      = <%= @prefixed_module %>Router()
 var <%= @module.downcase %>Presenter: <%= @prefixed_module %>Presenter      = <%= @prefixed_module %>Presenter()
 var <%= @module.downcase %>DataManager: <%= @prefixed_module %>DataManager  = <%= @prefixed_module %>DataManager()
 var <%= @module.downcase %>Interactor: <%= @prefixed_module %>Interactor    = <%= @prefixed_module %>Interactor()
 
-// presenter <-> wireframe
-<%= @module.downcase %>Presenter.wireframe = <%= @module.downcase %>Wireframe
-<%= @module.downcase %>Wireframe.presenter = <%= @module.downcase %>Presenter
+// presenter <-> Router
+<%= @module.downcase %>Presenter.Router = <%= @module.downcase %>Router
+<%= @module.downcase %>Router.presenter = <%= @module.downcase %>Presenter
 
 // presenter <-> interactor
 <%= @module.downcase %>Presenter.interactor = <%= @module.downcase %>Interactor
@@ -21,9 +21,9 @@ var <%= @module.downcase %>Interactor: <%= @prefixed_module %>Interactor    = <%
 // data_manager -> data_store
 // *** connect datastore
 
-// connect wireframes
-<%= @module.downcase %>Wireframe.rootWireframe = rootWireframe
-// *** connect more wireframes
+// connect Routers
+<%= @module.downcase %>Router.rootRouter = rootRouter
+// *** connect more Routers
 
 // configure delegate
 // *** add delegate here if needed

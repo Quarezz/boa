@@ -1,5 +1,5 @@
 //
-//  RootWireframe.swift
+//  RootRouter.swift
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RootWireframe: NSObject
+class RootRouter: NSObject
 {
     init(window: UIWindow)
     {

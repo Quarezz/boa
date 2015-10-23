@@ -1,18 +1,18 @@
 //
-//  <%= @project %>RootWireframe.m
+//  <%= @project %>RootRouter.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @project %>RootWireframe.h"
+#import "<%= @project %>RootRouter.h"
 
-@interface <%= @project %>RootWireframe ()
+@interface <%= @project %>RootRouter ()
 
 @end
 
-@implementation <%= @project %>RootWireframe
+@implementation <%= @project %>RootRouter
 
 - (id)initWithWindow:(UIWindow *)window
 {

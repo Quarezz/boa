@@ -1,12 +1,12 @@
 //
-//  <%= @prefixed_module %>Wireframe.m
+//  <%= @prefixed_module %>Router.m
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
 //
 //
 
-#import "<%= @prefixed_module %>Wireframe.h"
+#import "<%= @prefixed_module %>Router.h"
 
 #import "<%= @prefixed_module %>ModuleInterface.h"
 
@@ -14,11 +14,11 @@
 #import "<%= @prefixed_module %>Interactor.h"
 #import "<%= @prefixed_module %>Presenter.h"
 
-@interface <%= @prefixed_module %>Wireframe ()
+@interface <%= @prefixed_module %>Router ()
 
 @end
 
-@implementation <%= @prefixed_module %>Wireframe
+@implementation <%= @prefixed_module %>Router
 
 -(instancetype) init
 {

@@ -16,8 +16,8 @@ module Boa
       'Presenter.m'       => 'Presenter',
       'ViewController.h'  => 'View',
       'ViewController.m'  => 'View',
-      'Wireframe.h'       => 'Wireframe',
-      'Wireframe.m'       => 'Wireframe'
+      'Router.h'       => 'Router',
+      'Router.m'       => 'Router'
     }
 
     FILES_SWIFT = {
@@ -27,7 +27,7 @@ module Boa
       'Presenter.swift'       => 'Presenter',
       'ViewInterface.swift'   => 'View',
       'ViewController.swift'  => 'View',
-      'Wireframe.swift'       => 'Wireframe'
+      'Router.swift'       => 'Router'
     }
 
     Boa::Module.source_root(File.dirname(__FILE__))

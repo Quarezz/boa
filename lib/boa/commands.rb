@@ -25,12 +25,12 @@ module Boa
     }
 
     PROJECT_FILES_OBJC = {
-      'RootWireframe.h'   => 'Classes/Common/Wireframe',
-      'RootWireframe.m'   => 'Classes/Common/Wireframe'
+      'RootRouter.h'   => 'Classes/Common/Router',
+      'RootRouter.m'   => 'Classes/Common/Router'
     }
 
     PROJECT_FILES_SWIFT = {
-      'RootWireframe.swift' => 'Classes/Common/Wireframe'
+      'RootRouter.swift' => 'Classes/Common/Router'
     }
 
     desc 'init', 'initializes VIPER project'
@@ -46,7 +46,7 @@ module Boa
       empty_directory 'Classes/Common/Model'
       empty_directory 'Classes/Common/Store'
       empty_directory 'Classes/Common/Utils'
-      empty_directory 'Classes/Common/Wireframe'
+      empty_directory 'Classes/Common/Router'
 
       # Classes/Modules
       empty_directory 'Classes/Modules'

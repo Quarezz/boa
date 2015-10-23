@@ -23,14 +23,14 @@ class <%= @project %>AppDependencies: NSObject
 
     func installRootViewController()
     {
-        // *** present first wireframe here
+        // *** present first Router here
     }
 
     func configureDependencies(window: UIWindow)
     {
         // -----
         // root classes
-        let rootWireframe = RootWireframe.init(window: window)
+        let rootRouter = RootRouter.init(window: window)
         // *** add datastore
 
         // *** module initialization

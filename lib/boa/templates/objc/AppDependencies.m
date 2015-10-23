@@ -8,7 +8,7 @@
 
 #import "<%= @project %>AppDependencies.h"
 
-#import "RootWireframe.h"
+#import "RootRouter.h"
 
 @interface <%= @project %>AppDependencies ()
 
@@ -28,14 +28,14 @@
 
 - (void)installRootViewController
 {
-    // *** present first wireframe here
+    // *** present first Router here
 }
 
 - (void)configureDependencies:(UIWindow *)window
 {
     // -----
     // root classes
-    <%= @project %>RootWireframe *rootWireframe = [[<%= @project %>RootWireframe alloc] initWithWindow:window];
+    <%= @project %>RootRouter *rootRouter = [[<%= @project %>RootRouter alloc] initWithWindow:window];
     // *** add datastore
 
     // *** module initialization

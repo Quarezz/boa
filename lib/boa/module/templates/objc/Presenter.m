@@ -8,7 +8,7 @@
 
 #import "<%= @prefixed_module %>Presenter.h"
 
-#import "<%= @prefixed_module %>Wireframe.h"
+#import "<%= @prefixed_module %>Router.h"
 
 @implementation <%= @prefixed_module %>Presenter
 

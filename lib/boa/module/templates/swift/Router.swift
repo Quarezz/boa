@@ -1,5 +1,5 @@
 //
-//  <%= @prefixed_module %>Wireframe.swift
+//  <%= @prefixed_module %>Router.swift
 //  <%= @project %>
 //
 //  Created by <%= @author %> on <%= @date %>.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class <%= @prefixed_module %>Wireframe: NSObject
+class <%= @prefixed_module %>Router: NSObject
 {
-    var rootWireframe: RootWireframe?
+    var rootRouter: RootRouter?
     var presenter: <%= @prefixed_module %>Presenter?
     var viewController: <%= @prefixed_module %>ViewController?
 
