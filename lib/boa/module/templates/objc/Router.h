@@ -15,7 +15,7 @@
 @interface <%= @prefixed_module %>Router : NSObject
 
 @property (nonatomic, strong) <%= @prefix %>RootRouter *rootRouter;
-@property (nonatomic, strong) <%= @prefixed_module %>ViewController *viewController;
+@property (nonatomic, weak) <%= @prefixed_module %>ViewController *viewController;
 
 -(instancetype) init;
 
