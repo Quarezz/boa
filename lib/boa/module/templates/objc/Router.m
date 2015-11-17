@@ -19,13 +19,13 @@
 - (void)presentFromViewController:(UIViewController *)viewController
 {
     // instantiate viewController
-    // <%= @prefixed_module %>ViewController *viewController = ...;
+    <%= @prefixed_module %>ViewController *viewController = nil;
 
     // view <-> presenter
     <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
 
     presenter.router = self;
-    presenter.view = self.viewController;
+    presenter.view = viewController;
     viewController.presenter = presenter;
 
     // interactor <-> presenter
