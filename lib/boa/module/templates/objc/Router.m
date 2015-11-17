@@ -16,24 +16,25 @@
 
 @implementation <%= @prefixed_module %>Router
 
-- (void)presentFromViewController:(UIViewController *)viewController
+- (void)presentFromViewController:(UIViewController *) sourceViewController
 {
     // instantiate viewController
-    <%= @prefixed_module %>ViewController *viewController = nil;
+    self.viewController = nil;
 
     // view <-> presenter
-    <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
+    PRMProductsPresenter *presenter = [PRMProductsPresenter new];
 
     presenter.router = self;
-    presenter.view = viewController;
-    viewController.presenter = presenter;
+    presenter.view = self.viewController;
+    self.viewController.presenter = presenter;
 
     // interactor <-> presenter
-    <%= @prefixed_module %>Interactor *interactor = [<%= @prefixed_module %>Interactor new];
+    PRMProductsInteractor *interactor = [PRMProductsInteractor new];
     presenter.interactor = interactor;
     interactor.presenter = presenter;
 
     // present viewController
+    [sourceViewController presentViewController:self.viewController animated:YES completion:nil];
 }
 
 @end

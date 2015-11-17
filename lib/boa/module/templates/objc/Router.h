@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class <%= @prefix %>RootRouter;
+@class <%= @prefixed_module %>ViewController;
 
 @interface <%= @prefixed_module %>Router : NSObject
 
 @property (nonatomic, weak) <%= @prefixed_module %>ViewController *viewController;
 
-- (void)presentFromViewController:(UIViewController *)viewController;
+- (void)presentFromViewController:(UIViewController *) sourceViewController;
 
 @end
