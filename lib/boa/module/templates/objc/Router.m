@@ -22,14 +22,14 @@
     self.viewController = nil;
 
     // view <-> presenter
-    PRMProductsPresenter *presenter = [PRMProductsPresenter new];
+    <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
 
     presenter.router = self;
     presenter.view = self.viewController;
     self.viewController.presenter = presenter;
 
     // interactor <-> presenter
-    PRMProductsInteractor *interactor = [PRMProductsInteractor new];
+    <%= @prefixed_module %>Interactor *interactor = [<%= @prefixed_module %>Interactor new];
     presenter.interactor = interactor;
     interactor.presenter = presenter;
 
