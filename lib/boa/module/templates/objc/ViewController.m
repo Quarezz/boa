@@ -16,22 +16,24 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+-(void) viewDidLoad
 {
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+-(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+-(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
 }
 
 #pragma mark - Actions
+
+#pragma mark - UI Actions
 
 // ** handle UI events here
 

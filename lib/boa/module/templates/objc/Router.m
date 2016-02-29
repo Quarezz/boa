@@ -16,7 +16,7 @@
 
 @implementation <%= @prefixed_module %>Router
 
-- (void)presentFromViewController:(UIViewController *) sourceViewController
+-(void) presentFromViewController:(UIViewController *) sourceViewController
 {
     // instantiate viewController
     self.viewController = nil;

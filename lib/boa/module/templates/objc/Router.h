@@ -15,6 +15,6 @@
 
 @property (nonatomic, weak) <%= @prefixed_module %>ViewController *viewController;
 
-- (void)presentFromViewController:(UIViewController *) sourceViewController;
+-(void) presentFromViewController:(UIViewController *) sourceViewController;
 
 @end
