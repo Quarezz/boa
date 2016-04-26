@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol <%= @prefixed_module %>RouterInput <NSObject>
+
+@end
+
 @protocol <%= @prefixed_module %>InteractorInput <NSObject>
 
 @end

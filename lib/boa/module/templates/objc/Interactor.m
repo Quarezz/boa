@@ -10,6 +10,12 @@
 
 #import "<%= @prefixed_module %>DataManager.h"
 
+@interface <%= @prefixed_module %>Interactor()
+
+@property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
+
+@end
+
 @implementation <%= @prefixed_module %>Interactor
 
 @end

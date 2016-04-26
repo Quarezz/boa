@@ -11,10 +11,10 @@
 
 @class <%= @prefixed_module %>ViewController;
 
-@interface <%= @prefixed_module %>Router : NSObject
+@interface <%= @prefixed_module %>Router : NSObject <<%= @prefixed_module %>RouterInput>
 
 @property (nonatomic, weak) <%= @prefixed_module %>ViewController *viewController;
 
--(void) presentFromViewController:(UIViewController *) sourceViewController;
+-(void) navigateFrom:(UIViewController *) sourceViewController;
 
 @end

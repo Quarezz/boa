@@ -16,25 +16,23 @@
 
 @implementation <%= @prefixed_module %>Router
 
--(void) presentFromViewController:(UIViewController *) sourceViewController
+-(void) navigateFrom:(UIViewController *) sourceViewController
 {
     // instantiate viewController
     self.viewController = nil;
 
-    // view <-> presenter
     <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
 
     presenter.router = self;
     presenter.view = self.viewController;
     self.viewController.presenter = presenter;
 
-    // interactor <-> presenter
     <%= @prefixed_module %>Interactor *interactor = [<%= @prefixed_module %>Interactor new];
     presenter.interactor = interactor;
     interactor.presenter = presenter;
 
-    // present viewController
-    [sourceViewController presentViewController:self.viewController animated:YES completion:nil];
+    // show viewController
+    //[sourceViewController presentViewController:self.viewController animated:YES completion:nil];
 }
 
 @end

@@ -10,11 +10,8 @@
 
 #import "<%= @prefixed_module %>ModuleInterface.h"
 
-@class <%= @prefixed_module %>DataManager;
-
 @interface <%= @prefixed_module %>Interactor : NSObject <<%= @prefixed_module %>InteractorInput>
 
-@property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
 @property (nonatomic, weak)   id<<%= @prefixed_module %>InteractorOutput> presenter;
 
 @end
