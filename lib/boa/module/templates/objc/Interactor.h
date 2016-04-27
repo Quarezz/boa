@@ -12,6 +12,6 @@
 
 @interface <%= @prefixed_module %>Interactor : NSObject <<%= @prefixed_module %>InteractorInput>
 
-@property (nonatomic, weak)   id<<%= @prefixed_module %>InteractorOutput> presenter;
+@property (nonatomic, weak, nullable)   id<<%= @prefixed_module %>InteractorOutput> presenter;
 
 @end

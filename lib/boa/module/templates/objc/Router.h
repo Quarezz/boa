@@ -13,8 +13,8 @@
 
 @interface <%= @prefixed_module %>Router : NSObject <<%= @prefixed_module %>RouterInput>
 
-@property (nonatomic, weak) <%= @prefixed_module %>ViewController *viewController;
+@property (nonatomic, weak, readonly, nullable) <%= @prefixed_module %>ViewController *viewController;
 
--(void) navigateFrom:(UIViewController *) sourceViewController;
+-(void) navigateFrom:(nonnulls UIViewController *) sourceViewController;
 
 @end

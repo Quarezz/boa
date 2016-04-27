@@ -14,9 +14,9 @@
 
 @interface <%= @prefixed_module %>Presenter : NSObject <<%= @prefixed_module %>PresenterProtocol , <%= @prefixed_module %>InteractorOutput>
 
-@property (nonatomic, strong) <%= @prefixed_module %>Router *router;
-@property (nonatomic, strong) id<<%= @prefixed_module %>InteractorInput> interactor;
+@property (nonatomic, strong, nonnull) <%= @prefixed_module %>Router *router;
+@property (nonatomic, strong, nullable) id<<%= @prefixed_module %>InteractorInput> interactor;
 
-@property (nonatomic, weak) id<<%= @prefixed_module %>ViewProtocol> view;
+@property (nonatomic, weak, nullable) id<<%= @prefixed_module %>ViewProtocol> view;
 
 @end

@@ -12,7 +12,7 @@
 
 @interface <%= @prefixed_module %>Interactor()
 
-@property (nonatomic, strong) <%= @prefixed_module %>DataManager *dataManager;
+@property (nonatomic, strong, nullable) <%= @prefixed_module %>DataManager *dataManager;
 
 @end
 

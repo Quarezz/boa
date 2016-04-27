@@ -12,6 +12,6 @@
 
 @interface <%= @prefixed_module %>ViewController : UIViewController <<%= @prefixed_module %>ViewProtocol>
 
-@property (nonatomic, strong) id<<%= @prefixed_module %>PresenterProtocol> presenter;
+@property (nonatomic, strong, nullable) id<<%= @prefixed_module %>PresenterProtocol> presenter;
 
 @end
