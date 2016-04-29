@@ -19,7 +19,7 @@
 -(void) navigateFrom:(UIViewController *) sourceViewController
 {
     // instantiate viewController
-    _viewController = nil;
+    _viewController = [[UIStoryboard storyboardWithName:@"" bundle:nil] instantiateViewControllerWithIdentifier:@"<%= @prefixed_module %>ViewController"];
 
     <%= @prefixed_module %>Presenter *presenter = [<%= @prefixed_module %>Presenter new];
 
